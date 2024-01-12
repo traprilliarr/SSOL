@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    section {
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #section1 {
+      background-image: url('Sollie.gif');
+      background-size: 100% 100%;
+      position: relative;
+    }
+
+    #section1 img {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 100px;
+      height: auto;
+      animation: rotateLogo 5s linear infinite;
+      transform-origin: center;
+    }
+
+    @keyframes rotateLogo {
+      from {
+        transform: rotate(0deg) rotateX(0deg) rotateY(0deg);
+      }
+      to {
+        transform: rotate(360deg) rotateX(360deg) rotateY(360deg);
+      }
+    }
+
+    #headerContent {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #8B4513;
+      border-radius: 50px;
+      padding: 50px;
+      max-width: 800px;
+      text-align: center;
+      font-family: 'Chewy', cursive;
+      font-weight: bold;
+      font-size: 3em;
+      line-height: 1;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    #contentText {
+      margin: 0;
+    }
+
+    #journeyText {
+      background-color: rgba(139, 69, 19, 0.7);
+      color: #fff;
+      border-radius: 20px;
+      padding: 20px;
+      font-size: 1.5em;
+      max-width: 600px;
+      font-family: 'Chewy', cursive;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .buttonContainer {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 20px;
+    }
+
+    .cloudButton {
+      background-color: #87CEEB;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      padding: 15px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      font-family: 'Chewy', cursive;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .cloudButton img {
+      width: 30px;
+      height: auto;
+      margin-right: 10px;
+    }
+
+    #section2 {
+      background-image: url('mount.png');
+      background-size: 100% 100%;
+    }
+
+    #section2 h1 {
+      font-size: 1.5em;
+      margin: 0;
+      color: #8B4513;
+      max-width: 600px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Chewy', cursive;
+      line-height: 1.5;
+    }
+
+    #section3 {
+      background-image: url('bawah.png');
+      background-size: 100% 100%;
+      overflow: hidden;
+    }
+
+    #soldog {
+      position: absolute;
+      left: 50px;
+      top: 50%;
+      transform: translate(0%, -50%);
+      width: 400px;
+      height: auto;
+      animation: moveSoldog 16s linear infinite;
+    }
+
+    @keyframes moveSoldog {
+      0%, 100% {
+        transform: translate(0%, -50%);
+      }
+      8% {
+        transform: translate(-20px, -50%);
+      }
+      16% {
+        transform: translate(25px, -50%);
+      }
+      24% {
+        transform: translate(-15px, -50%);
+      }
+      32% {
+        transform: translate(20px, -50%);
+      }
+      40% {
+        transform: translate(-10px, -50%);
+      }
+      48% {
+        transform: translate(15px, -50%);
+      }
+      56% {
+        transform: translate(-5px, -50%);
+      }
+      64% {
+        transform: translate(10px, -50%);
+      }
+      72% {
+        transform: translate(-8px, -50%);
+      }
+      80% {
+        transform: translate(12px, -50%);
+      }
+      88% {
+        transform: translate(-3px, -50%);
+      }
+    }
+
+    #section3 h1 {
+      font-size: 3em;
+      margin: 0;
+      color: #8B4513;
+      font-family: 'Chewy', cursive;
+      white-space: pre-line;
+    }
+
+    #socialButtons {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 20px;
+    }
+
+    .socialButton {
+      background-color: #1DA1F2;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      padding: 15px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      font-family: 'Chewy', cursive;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .socialButton img {
+      width: 40px;
+      height: auto;
+      margin-right: 10px;
+    }
+
+    #preload {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    #preload img {
+      width: 100px;
+      height: auto;
+      animation: rotateLogo 2s linear infinite;
+    }
+  </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chewy&display=swap">
+</head>
+<body>
+    <div id="preload">
+        <img src="gambar.png" alt="Loading Logo" />
+      </div>
+
+      <audio autoplay loop>
+        <source src="backsound.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+      </audio>
+
+  <section id="section1">
+    <img src="gambar.png" alt="Logo" />
+    <div id="headerContent">
+      <p id="contentText">Unleashing summer vibes with Sollie</p>
+    </div>
+    <div id="journeyText">
+      Join the journey through Sollie's Solana escapades, where each token holds tales of tail-wagging joy and sun-kissed memories.
+    </div>
+    <div class="buttonContainer">
+      <a href="https://example.com/dextools" class="cloudButton">
+        Dextools
+      </a>
+      <a href="https://example.com/buy-soll" class="cloudButton">
+        Buy $SOLL
+      </a>
+    </div>
+  </section>
+
+  <section id="section2">
+    <h1>
+      $SOLL captures the essence of summer and canine companionship on the Solana network.
+      Immerse yourself in a world of sunlit adventures and playful moments with this unique token.
+      Join the community for a tail-wagging journey through Sollie's solana escapades.
+      Discover the spirit of $SOLL, where summer vibes meet the warmth of loyal friendship.
+    </h1>
+  </section>
+
+  <section id="section3">
+    <img id="soldog" src="soldog.png" alt="Soldog" />
+    <h1>
+      0% Buy & Sell Tax
+      Burned Liquidity
+      Total Supply 1B
+      Revoked Ownership
+    </h1>
+    <div id="socialButtons">
+      <button class="socialButton">
+        <img src="1.png" alt="Twitter Logo" />
+        Twitter
+      </button>
+      <button class="socialButton">
+        <img src="2.png" alt="Telegram Logo" />
+        Telegram
+      </button>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var preloadElement = document.getElementById("preload");
+      preloadElement.style.opacity = "0";
+      preloadElement.style.pointerEvents = "none";
+      preloadElement.style.transition = "opacity 4s ease-in-out";
+      preloadElement.addEventListener("transitionend", function () {
+        preloadElement.remove();
+      });
+    });
+  </script>
+
+</body>
+</html>
