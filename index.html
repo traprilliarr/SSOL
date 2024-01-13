@@ -273,6 +273,11 @@
         padding: 10px 15px;
         font-size: 0.8em;
       }
+
+      /* Adjust logo size for smaller screens */
+      #section1 img {
+        width: 60px;
+      }
     }
 
     @media only screen and (max-width: 480px) {
@@ -303,19 +308,24 @@
         padding: 8px 12px;
         font-size: 0.7em;
       }
+
+      /* Further adjust logo size for smaller screens */
+      #section1 img {
+        width: 40px;
+      }
     }
   </style>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chewy&display=swap">
 </head>
 <body>
-    <div id="preload">
-        <img src="gambar.png" alt="Loading Logo" />
-      </div>
+  <div id="preload">
+    <img src="gambar.png" alt="Loading Logo" />
+  </div>
 
-      <audio autoplay loop>
-        <source src="backsound.mp3" type="audio/mp3">
-        Your browser does not support the audio tag.
-      </audio>
+  <audio autoplay loop>
+    <source src="backsound.mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+  </audio>
 
   <section id="section1">
     <img src="gambar.png" alt="Logo" />
@@ -375,6 +385,5 @@
       });
     });
   </script>
-
 </body>
 </html>
